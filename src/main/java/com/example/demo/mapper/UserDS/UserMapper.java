@@ -1,4 +1,4 @@
-package com.example.demo.mapper;
+package com.example.demo.mapper.UserDS;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
