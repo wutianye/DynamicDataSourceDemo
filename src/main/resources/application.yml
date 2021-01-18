@@ -4,18 +4,17 @@ server:
     context-path: /
 spring:
   datasource:
-    dynamic:
-      datasource:
-        master:
-          url: jdbc:mysql://localhost:3306/wty?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-          username: root
-          password: ${db_password}
-          driver-class-name: com.mysql.jdbc.Driver
-        student:
-          url: jdbc:mysql://localhost:3306/student?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-          username: root
-          password: ${db_password}
-          driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      master:
+        url: jdbc:mysql://localhost:3306/wty?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: ${db_password}
+        driver-class-name: com.mysql.jdbc.Driver
+      student:
+        url: jdbc:mysql://localhost:3306/student?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: ${db_password}
+        driver-class-name: com.mysql.jdbc.Driver
   autoconfigure:
     exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
     
