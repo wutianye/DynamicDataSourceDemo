@@ -1,13 +1,16 @@
 package com.example.demo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+
 public class Student {
+
     private String id;
 	
 	private String name;
 	
 	private String className;
 
-	public String getId() {
+	public String  getId() {
 		return id;
 	}
 

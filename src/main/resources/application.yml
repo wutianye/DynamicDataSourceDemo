@@ -4,6 +4,7 @@ server:
     context-path: /
 spring:
   datasource:
+    type: com.alibaba.druid.pool.xa.DruidXADataSource
     dynamic:
       datasource:
         master:
@@ -19,6 +20,10 @@ spring:
   autoconfigure:
     exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
     
-    
-mybatis-plus:
-  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  jta:
+    atomikos:
+      properties:
+        log-base-dir: ../logs
+    transaction-manager-id: txManager 
+#mybatis-plus:
+ # mapper-locations: classpath*:mapper/**/*Mapper.xml

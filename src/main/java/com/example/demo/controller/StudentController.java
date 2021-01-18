@@ -18,7 +18,7 @@ public class StudentController {
 	StudentService studentService;
 	
 	@GetMapping(value = "/single")
-	public Result<Student> getStudentInfo(@RequestParam("studentId") String id){
+	public Result<Student> getStudentInfo(@RequestParam("studentId") int id){
 		return Result.success(studentService.getStudentInfo(id));
 	}
 
