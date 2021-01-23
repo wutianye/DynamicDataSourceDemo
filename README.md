@@ -13,5 +13,6 @@ transaction2  分支为分布式解决方案二：   使用jta+automix 自定义
               优点：灵活
               缺点：配置复杂
               
-multids       分支为手写多数据源注解：   数据源继承AbstractRoutingDataSource   determineCurrentLookupKey是最重要的方法
+multids       分支为手写多数据源注解：   数据源继承AbstractRoutingDataSource   determineCurrentLookupKey是最重要的方法。
+              同时也包含了动态添加数据源的方法
 
