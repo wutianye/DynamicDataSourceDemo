@@ -47,7 +47,7 @@ public class MybatisPlusConfig {
 		Map<Object, Object> targetDataSources = new HashMap<>(2);
 		targetDataSources.put(DataSourceEnum.MASTER.getValue(), oneDataSource);
 		targetDataSources.put(DataSourceEnum.STUDENT.getValue(), twoDataSource);
-		DynamicDataSource dynamicDataSource = new DynamicDataSource();
+		DynamicDataSource dynamicDataSource = DynamicDataSource.getInstance();
 		dynamicDataSource.setDefaultTargetDataSource(oneDataSource);
 		dynamicDataSource.setTargetDataSources(targetDataSources);
 		return dynamicDataSource;
